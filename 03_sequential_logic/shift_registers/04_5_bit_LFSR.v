@@ -3,7 +3,8 @@ module top_module(
     input reset,    // Active-high synchronous reset to 5'h1
     output [4:0] q
 ); 
-    wire[4:0] values;
+    reg [4:0] values;
+    
     always @(posedge clk) begin
         if (reset) begin
             values <= 5'h1;

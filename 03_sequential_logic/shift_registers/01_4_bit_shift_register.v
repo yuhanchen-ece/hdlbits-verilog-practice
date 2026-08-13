@@ -4,9 +4,10 @@ module top_module(
     input load,
     input ena,
     input [3:0] data,
-    output reg [3:0] q); 
+    output [3:0] q); 
     
-    wire[3:0] current;
+    reg [3:0] current;
+    
     always @(posedge clk or posedge areset) begin
         if (areset) begin
             current <= {4{1'b0}};
